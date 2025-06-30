@@ -30,6 +30,30 @@ def main():
     #4 pergunta
     print("O segundo numero é maior?\t" + str(segundo_valor>primeiro_valor))
 
+    #pedido de input
+    user_input :str = input("digite qq coisa:\t")
+
+    #print da resposta
+    print(True if 3 <= len(user_input) < 10 else False)
+
+    #declaracao das variaveis
+    numero_magico :int = 12345679
+    multiplicador:int = 0
+    #garantir que apenas aceitamos ints
+    while(True):
+        try:
+            multiplicador = (int)(input("Por favor insira um numero entre 1 e 9").strip())
+            if 0 < multiplicador < 10:  break
+        except:
+            print("Por favvor apenas numeros de 1 a 9")
+    #calculos
+    numero_utilizador :int = 9 * multiplicador
+    numero_magico = numero_utilizador * numero_magico
+    #prints
+    print(f"O novo numero e {numero_magico}")
+
+
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
