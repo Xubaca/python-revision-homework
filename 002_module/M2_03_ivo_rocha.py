@@ -1,4 +1,4 @@
-def main():
+def pergunta_1():
     #defenicao das variaveis
     lol_champs_list :list[str] = ["Garen","Katarina","Ashe","Warwick"]
     lol_champs_tuple :tuple[str, str, str, str] = ("Nami","Soraka","Miss Fortune","Lucian")
@@ -36,5 +36,19 @@ def main():
     print(lol_champs_list)
 
 
+def pergunta_2():
+    #instanciacao
+    one_piece_set :set[str] = {"luffy","zoro","Dr. chopper"}
+    #ordem de chegada à crew
+    one_pice_dict :dict[int:str] = {
+        1:"luffy",
+        2:"zoro",
+        3:"Nami"
+    }
+    print(one_piece_set)
+    print(one_pice_dict)
+    print()
 
-main()
+
+
+pergunta_2()
