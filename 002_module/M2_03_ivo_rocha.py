@@ -110,7 +110,7 @@ def pergunta_3():
         except:
             print("Por favor apenas ints e floats")
             i-=1
-    
+
 
 
 
