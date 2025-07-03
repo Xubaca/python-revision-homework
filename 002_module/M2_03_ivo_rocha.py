@@ -1,3 +1,6 @@
+from os import remove
+
+
 def pergunta_1():
     #defenicao das variaveis
     lol_champs_list :list[str] = ["Garen","Katarina","Ashe","Warwick"]
@@ -35,20 +38,80 @@ def pergunta_1():
     lol_champs_list.remove("Bard")
     print(lol_champs_list)
 
+#**2) Trabalhar com sets e dicionários**
 
+#* Crie um set com pelo menos 3 elementos relacionados a um tema (por exemplo: veículos, comida, música).
+#* Crie um dicionário com 3 pares chave-valor relacionados ao mesmo tema.
+#* Mostre o set e o dicionário.
+#* Mostre o 2º elemento do set e o valor da primeira chave-valor do dicionário.
+#* Modifique um elemento do set ou do dicionário e mostre o resultado.
+#* Mostre o tamanho do set e do dicionário.
+#* Pesquise se um elemento está presente no set e no dicionário e mostre os resultados (True ou False).
+#* Adicione um elemento ao set e uma chave-valor ao dicionário e mostre ambos.
+#* Apague o conteúdo do set e do dicionário e mostre-os novamente.
 def pergunta_2():
     #instanciacao
-    one_piece_set :set[str] = {"luffy","zoro","Dr. chopper"}
+    #ordem dos meus favoritos
+    one_piece_set :set[str] = {"usopp","zoro","Dr. chopper"}
     #ordem de chegada à crew
-    one_pice_dict :dict[int:str] = {
-        1:"luffy",
-        2:"zoro",
-        3:"Nami"
+    one_piece_dict :dict[int:str] = {
+        0:"luffy",
+        1:"zoro",
+        2:"Nami"
     }
     print(one_piece_set)
-    print(one_pice_dict)
-    print()
+    print(one_piece_dict)
+    print(type(one_piece_set))
+    #printing das estruturas
+    temp_list_one_piece:list = list(one_piece_set)
+    print(temp_list_one_piece[1])
+    print(next(iter(one_piece_dict.values())))
+    #modificação
+    one_piece_dict[2] = "Sanji"
+    print(one_piece_dict)
+    #printing size
+    print(len(one_piece_dict))
+    print(len(one_piece_set))
+
+    #pesquisa de elementos
+
+    resp :str = input("Que elemento é que quer pesquisar nas duas estruturas?")
+    print("O dict tem este valor?\t" + str(resp in one_piece_dict.values()))
+    print("O set tem este valor?\t" + str(resp in one_piece_set))
+
+    #adicao de elementos
+    one_piece_dict[4] = "Nami"
+    one_piece_set.add("Sniper King")
+    print(one_piece_dict)
+    print(one_piece_set)
+
+    #apagar o conteudo
+    one_piece_dict.clear()
+    one_piece_set.clear()
+    print(one_piece_dict)
+    print(one_piece_set)
+
+
+#**3) Peça ao utilizador para inserir 3 números (inteiros ou decimais) individualmente.**
+#* Crie uma lista com os números fornecidos.
+#* Calcule o somatório dos elementos da lista.
+#* Imprima o resultado.
+#*Ajuda: existe uma função chamada sum(lista) Experimente-a!*
+def pergunta_3():
+    numeros:list = []
+    for i in range[:3]:
+        try:
+            dynamic_variable = input("Por favor insira um numero! apenas ints ou floats!")
+            if(type(dynamic_variable) not in type([int, float]) ):
+                print("Por favor apenas ints e floats")
+                i -=1
+                continue
+            numeros.append((float)(dynamic_variable))
+        except:
+            print("Por favor apenas ints e floats")
+            i-=1
+    
 
 
 
-pergunta_2()
+pergunta_3()
