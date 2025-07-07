@@ -111,6 +111,28 @@ def pergunta_3():
     soma :float = sum(numeros)
     print(f"A soma é:\t{round(soma,2)}")
 
+#**4) Peça ao utilizador para inserir 4 números (inteiros ou decimais) individualmente.**
+#* Crie uma lista com os números fornecidos.
+#* Calcule a média aritmética dos elementos da lista.
+#* Imprima o resultado.
+#*Neste caso sabemos que o número de elementos que o utilizador introduziu é 4, mas o objetivo será deixar o programa abstrato,e portanto,
+#não fazer referência ao número 3; deve calcular o numeros de elementos da lista*
+def pergunta_4():
+    numeros:list =[]
+    i :int = 0
+    while(i<3):
+        try:
+            #inteiros e floats podem ser guardados dentro de um float
+            resposta:float = (float)(input("Por favor digite o numero desejado!\n"))
+            numeros.append(resposta)
+            i+=1
+        except:
+            print("Por favor, apenas numeros")
+    #usamos o sum falado na pergunta anterior para facilitar o calculo ,não tendo de fazer um for loop
+    media :float = sum(numeros)/4
+    print(f"A soma é {round(media,2)}")
 
 
-pergunta_3()
+
+
+pergunta_4()
