@@ -99,18 +99,17 @@ def pergunta_2():
 #*Ajuda: existe uma função chamada sum(lista) Experimente-a!*
 def pergunta_3():
     numeros:list = []
-    for i in range[:3]:
+    i:int = 0
+    while(i < 3):
         try:
-            dynamic_variable = input("Por favor insira um numero! apenas ints ou floats!")
-            if(type(dynamic_variable) not in type([int, float]) ):
-                print("Por favor apenas ints e floats")
-                i -=1
-                continue
-            numeros.append((float)(dynamic_variable))
+            #podemos sempre guardar ints como floats por isso é mais facil se assumirmos sempre que são floats
+            dynamic_variable = (float)(input("Por favor insira um numero! apenas ints ou floats!\n"))
+            numeros.append(dynamic_variable)
+            i+=1
         except:
             print("Por favor apenas ints e floats")
-            i-=1
-
+    soma :float = sum(numeros)
+    print(f"A soma é:\t{round(soma,2)}")
 
 
 
