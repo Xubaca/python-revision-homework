@@ -160,9 +160,17 @@ def pergunta_6():
     cavaleiro = {'vida': 2, 'ataque': 2, 'defesa': 2, 'alcance': 2}
     guerreiro = {'vida': 2, 'ataque': 2, 'defesa': 2, 'alcance': 2}
     arqueiro = {'vida': 2, 'ataque': 2, 'defesa': 2, 'alcance': 2}
-    
 
+    cavaleiro['vida'] = guerreiro['defesa']*2
+    guerreiro['ataque']=cavaleiro['alcance']*2
+    arqueiro.update({
+        'vida' : guerreiro['vida'],
+        'ataque' : guerreiro['ataque'],
+        'defesa' : (float)(guerreiro['defesa']*0.5),
+        'alcance' : (float)(guerreiro['alcance']*2)
+    })
+    print(arqueiro,guerreiro,cavaleiro, sep="\n")
     pass
 
 
-pergunta_5()
+pergunta_6()
