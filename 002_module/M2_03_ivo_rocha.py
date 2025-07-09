@@ -166,8 +166,8 @@ def pergunta_6():
     arqueiro.update({
         'vida' : guerreiro['vida'],
         'ataque' : guerreiro['ataque'],
-        'defesa' : (float)(guerreiro['defesa']*0.5),
-        'alcance' : (float)(guerreiro['alcance']*2)
+        'defesa' : int(float(guerreiro['defesa'])*0.5),
+        'alcance' : int((float)(guerreiro['alcance'])*2)
     })
     print(arqueiro,guerreiro,cavaleiro, sep="\n")
     pass
