@@ -132,7 +132,37 @@ def pergunta_4():
     media :float = sum(numeros)/4
     print(f"A soma é {round(media,2)}")
 
+    #**5) Crie uma matriz inicial com quatro sublistas, cada uma contendo três números inteiros.**
+    #* Calcule a soma dos três primeiros elementos da primeira sublista e adicione esse resultado como o quarto elemento na mesma sublista.
+    #* Repita o processo para as outras três sublistas, calculando a soma dos três primeiros elementos e adicionando esse resultado como o quarto elemento em cada sublista.
+    #*Não vale colocar diretamente os valores (nem os índices nem a soma)
+    #*Há que pesquisar uma forma automatizada de aceder e modificar esses valores
+
+def pergunta_5():
+    matriz :list[list[int]] = [
+        [1, 1, 1],
+        [2, 2, 7],
+        [3, 3, 9],
+        [4, 4, 13]
+    ]
+    #usando a funcao Sum conseguimos obter o resultado sem necessitar de um ciclo for ou foreach
+    matriz[0].append(sum(matriz[0]))
+    print(matriz[0])
+    #iteração para evitar repetição de código
+    # Eu acho que isto satisfas a condição "Não vale colocar diretamente os valores (nem os índices nem a soma)"
+    for i in range(1,4):
+        matriz[i].append(sum(matriz[i]))
+    print(matriz)
+    pass
 
 
+def pergunta_6():
+    cavaleiro = {'vida': 2, 'ataque': 2, 'defesa': 2, 'alcance': 2}
+    guerreiro = {'vida': 2, 'ataque': 2, 'defesa': 2, 'alcance': 2}
+    arqueiro = {'vida': 2, 'ataque': 2, 'defesa': 2, 'alcance': 2}
+    
 
-pergunta_4()
+    pass
+
+
+pergunta_5()
