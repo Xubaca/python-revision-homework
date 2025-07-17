@@ -39,6 +39,16 @@ def pergunta_1():
 #* 7887 → Formatar com 7 números inteiros preenchidos com espaços
 #* 20.02 → Formatar com 3 números inteiros e 3 números decimais
 
-def pergutna_2():
-    
+def pergunta_2():
+    #printing
+    print("{:>20}".format("Olá mundo"))
+    #não tenho a certeza se é isto que me estão a pedir
+    print("{:.4}".format("Olá mundo"))
+    #não tenho a certeza se é isto que me estão a a pedir
+    print("{:^20.2}".format("Olá mundo"))
+    print("{:05d}".format(150))
+    print("{: 5d}".format(7887))
+    print("{:07.3f}".format(20.02))
     pass
+
+pergunta_2()
