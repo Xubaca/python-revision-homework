@@ -20,34 +20,23 @@ def pergunta_1():
     #+=1 se o numero é menor que o seguinte ou -=1
     order :int = 0
     #vira true se houver numeros iguais
-    equal_counter :bool = False
     for i in range(0,2):
         if(numeros[i] >  numeros[i+1]):
-            order += 1
-        elif(numeros[i] < numeros[i+1]):
             order -= 1
         else:
-            equal_counter = True
+            order += 1
 
-    #Controla a resposta se houver um numero igual
-    if(equal_counter):
-        match order:
-            case 2:
-                print("Ordem ascendente!\n")
-            case -2:
-                print("Ordem Descnedente!\n")
-            case _:
-                print("Nenhuma ordem!")
-    #Controla se não houver numeros iguais
-    else:
-        match order:
-            case 3:
-                print("Ordem ascendente!\n")
-            case -3:
-                print("Ordem descendente!\n")
-            case _:
-                print("NEnhuma Ordem!\n")
+    #Controla o output
+    match order:
+        case 2:
+            print("Ordem ascendente!\n")
+        case -2:
+            print("Ordem descendente!\n")
+        case _:
+            print("NEnhuma Ordem!\n")
 
 
 
-pergunta_1()
+def pergunta_2():
+
+    pass
