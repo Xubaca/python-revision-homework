@@ -109,4 +109,23 @@ def pergunta_5():
     for i in range(0,101,2):
         soma += i
         print(f"A soma atual: {soma}")
+import random as r
+def pergunta_6():
+    random_number = r.randint(0,9)
+    while True:
+        #error handling
+        try:
+            resp:int = int(input(("Por favor escolha um numero entre 0 e 9:\t")))
+            if (resp == random_number):
+                print("Acertaste")
+                break
+            elif (resp < random_number):
+                print("O numero e menor que o escolhido!")
+            else:
+                print("O numero e maior que o escolhido!")
+        except:
+            print("Por favor apenas numeros entre 0 e 9!")
+    #resposta com validacao da lista secreta
+    print(f"O numero encontrava-se na lista secreta?\t{"sim" if resp in [2,4,5,7] else "nao"}")
 
+pergunta_6()
